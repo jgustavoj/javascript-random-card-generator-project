@@ -6,5 +6,20 @@ import "../assets/img/4geeks.ico";
 import "../style/index.scss";
 
 window.onload = function() {
-  console.log("Hello Rigo from the console!");
+  document.querySelector(".number").innerHTML = generateRandomNumber();
+  //document.querySelectorAll("#symbol").classList.add(generateRandomSuit());
+  document.querySelector(".topsymbol").innerHTML = generateRandomSuit();
+  document.querySelector(".bottomsymbol").innerHTML = generateRandomSuit();
+};
+
+let generateRandomNumber = () => {
+  let numbers = ["A", "K", "Q", "J", "2", "3", "4", "5", "6", "8", "9", "10"];
+  let indexNumbers = Math.floor(Math.random() * numbers.length);
+  return numbers[indexNumbers];
+};
+
+let generateRandomSuit = () => {
+  let suit = ["diamond", "spade", "club", "heart"];
+  let indexSuit = Math.floor(Math.random() * suit.length);
+  return suit[indexSuit];
 };

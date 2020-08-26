@@ -31,17 +31,25 @@ body {
   position: fixed;
   font-size: 150px;
 }
-
-.topsymbol {
+.top-symbol {
   position: absolute;
   top: -65px;
   left: 20px;
 }
-.bottomsymbol {
+.bottom-symbol {
   position: absolute;
   right: 20px;
 }
 
-/* .card.spade.topsymbol.bottomsymbol {
-content: "\2660";
- } */
+// .card.spade.top-symbol.bottom-symbol {
+//   content: "\2660";
+// }
+// .card.heart.top-symbol.bottom-symbol {
+//   content: "\2665";
+// }
+// .card.club.top-symbol.bottom-symbol {
+//   content: "\2663";
+// }
+// .card.diamond.top-symbol.bottom-symbol {
+//   content: "\2666";
+//}

@@ -7,9 +7,9 @@ import "../style/index.scss";
 
 window.onload = function() {
   document.querySelector(".number").innerHTML = generateRandomNumber();
-  //document.querySelectorAll("#symbol").classList.add(generateRandomSuit());
-  document.querySelector(".topsymbol").innerHTML = generateRandomSuit();
-  document.querySelector(".bottomsymbol").innerHTML = generateRandomSuit();
+  document.querySelectorAll("#symbol").classList.add(generateRandomSuit());
+  //document.querySelector(".top-symbol").innerHTML = generateRandomSuit();
+  //document.querySelector(".bottom-symbol").innerHTML = generateRandomSuit();
 };
 
 let generateRandomNumber = () => {

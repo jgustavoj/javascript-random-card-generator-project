@@ -2,14 +2,25 @@
 
 import "../assets/img/rigo-baby.jpg";
 import "../assets/img/4geeks.ico";
-//import 'breathecode-dom'; //DOM override to make JS easier to use
+import "breathecode-dom"; //DOM override to make JS easier to use
 import "../style/index.scss";
+
+// first Attemps at onload functions query
+// window.onload = function() {
+//   document.querySelector(".number").innerHTML = generateRandomNumber();
+//   //document.querySelectorAll(".suits").innerHTML = generateRandomSuit();
+//   document.querySelector(".top-suit").innerHTML = generateRandomSuit();
+//   //document.querySelector(".bottom-suit").innerHTML = generateRandomSuit();
+// };
 
 window.onload = function() {
   document.querySelector(".number").innerHTML = generateRandomNumber();
-  document.querySelectorAll("#symbol").classList.add(generateRandomSuit());
-  //document.querySelector(".top-symbol").innerHTML = generateRandomSuit();
-  //document.querySelector(".bottom-symbol").innerHTML = generateRandomSuit();
+  let suitDivs = document.querySelectorAll(".suits");
+  let randomlySelectedSuit = generateRandomSuit();
+  for (let div of suitDivs) {
+    div.innerHTML = randomlySelectedSuit.suit;
+    div.style.color = randomlySelectedSuit.color;
+  }
 };
 
 let generateRandomNumber = () => {
@@ -18,8 +29,14 @@ let generateRandomNumber = () => {
   return numbers[indexNumbers];
 };
 
+//My function suit
 let generateRandomSuit = () => {
-  let suit = ["diamond", "spade", "club", "heart"];
-  let indexSuit = Math.floor(Math.random() * suit.length);
-  return suit[indexSuit];
+  let pokerSuit = [
+    { suit: "&#9670;", color: "black" },
+    { suit: "&#9824;", color: "black" },
+    { suit: "&#9827;", color: "black" },
+    { suit: "&#9829;", color: "red" }
+  ];
+  let indexSuit = Math.floor(Math.random() * pokerSuit.length);
+  return pokerSuit[indexSuit];
 };

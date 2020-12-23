@@ -2,19 +2,19 @@
 
 body {
   background: green;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
 }
 .card {
   background-color: white;
   width: 400px;
   height: 600px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  margin-top: 8%;
   border-radius: 25px;
-  display: inline-block;
   text-align: center;
   padding-top: 180px;
-  position: fixed;
   font-size: 150px;
 }
 .top-suit {
